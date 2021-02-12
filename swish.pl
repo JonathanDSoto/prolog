@@ -1,18 +1,23 @@
 % Hechos 
-gato(michi).
-gato(lion).
-gato(bola).
+perro(pecas).
+perro(patas).
+perro(panzon).
 
-perro(taco).
-perro(pug).
+gato(michu).
+gato(bigotes).
+gato(figaro).
 
-%"taco es hermano de pug"
-hermano(taco,pug).
-hermano(pug,taco).
+esHermano(patas,panzon).
+esHermano(panzon,patas).
 
-tiene(lion,pulgas).
-tiene(taco,collar).
+esHermano(bigotes,figaro).
+esHermano(figaro,bigotes).
 
-% Reglas
-animal(X) :- gato(X).
+tieneVacuna(pecas,rabia).
+tieneVacuna(michu,rabia).
+
+% Reglas 
 animal(X) :- perro(X).
+animal(X) :- gato(X).
+
+mutante(X) :- perro(X), gato(X).
