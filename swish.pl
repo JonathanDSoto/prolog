@@ -1,23 +1,19 @@
-% Hechos 
-perro(pecas).
-perro(patas).
-perro(panzon).
+juega(hector,baloncesto).
+juega(miguel,balonmano).
+juega(miguel,rugby).
+juega(miguel,ajedrez).
+juega(alicia,tenis).
+juega(alicia,baloncesto).
+juega(alicia,ajedrez).
 
-gato(michu).
-gato(bigotes).
-gato(figaro).
+jugadores(A,B):- juega(A,C), juega(B,C).
 
-esHermano(patas,panzon).
-esHermano(panzon,patas).
+/*Utiliza el predicado juega(Persona,Deporte) 
+ * para declarar lo siguientes hechos relativos a 
+ * deportistas: o Héctor juega al baloncesto. 
+ * o Miguel juega al balonmano y rugby o Alicia 
+ * juega al tenis, baloncesto y ajedrez. 
 
-esHermano(bigotes,figaro).
-esHermano(figaro,bigotes).
-
-tieneVacuna(pecas,rabia).
-tieneVacuna(michu,rabia).
-
-% Reglas 
-animal(X) :- perro(X).
-animal(X) :- gato(X).
-
-mutante(X) :- perro(X), gato(X).
+ Define una regla que permita comprobar si dos 
+ personas juegan al mismo deporte.
+Obtén los deportes que realiza una persona*/
